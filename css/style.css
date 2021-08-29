@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+*,
+*::before
+*::after {
+    box-sizing: inherit;
+}
+
+/*Font reminder
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Permanent Marker', cursive; */
+
+p {
+    /* text-align: center; */
+    font-family: 'Permanent Marker', cursive;
+    border: solid black 5px;
+}
+
+
+
