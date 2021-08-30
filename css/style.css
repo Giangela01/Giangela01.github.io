@@ -11,10 +11,34 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Permanent Marker', cursive; */
 
-p {
+header {
     /* text-align: center; */
+    display: flex; 
     font-family: 'Permanent Marker', cursive;
-    border: solid black 5px;
+    /* border: solid black 5px; */
+    padding: 5px 18px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+input[type="text" i] {
+    padding: 5px 10px;
+    margin-top: 32.5px;
+    border: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 48px;
+    outline: none;
+    color: red;
+}
+
+
+
+#s-btn {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 48px;
+    outline: none;
 }
 
 
