@@ -6,5 +6,4 @@ $('#s-word').on('input', function(event) {
     searchBtn.type = "submit";
     searchBtn.setAttribute("id", "s-btn");
     document.getElementById("search").appendChild(searchBtn)
-
 });
