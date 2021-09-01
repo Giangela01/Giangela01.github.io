@@ -1,17 +1,18 @@
 //for button to appear
 
 $('#s-word').change(function() {
-    let searchBtn = document.createElement("button");
-    searchBtn.innerHTML = "?";
+    let searchBtn = document.createElement("input");
+    searchBtn.value = "Hit ENTER again.";
     searchBtn.type = "submit";
     searchBtn.setAttribute("id", "s-btn");
     document.getElementById("search").appendChild(searchBtn)
 });
 
-// $('form').on('submit', getInfo);
+$('form').on('submit', getInfo);
 
 function getInfo(event) {
-    // event.preventDefault();
+
+    event.preventDefault();
 
     $.ajax({
          url:'https://api.dictionaryapi.dev/api/v2/entries/en/delta'
