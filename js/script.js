@@ -32,17 +32,22 @@ function retrieveInfo(data) {
     let table = document.getElementById('myTable')
 
     for (let i = 0; i < wordData.length; i++) {
-        let row = ` <tr>
-                        <td>${wordData[i].word}</td>
+
+        let row = `<tr>
+                        <td>${wordData[i].phonetic}</td>
                     </tr>
                     <tr>
                         <td>${wordData[i].origin}</td>
-                    </tr>
-                    <tr>
-                        <td>${wordData[i].meanings}</td>
                     </tr>`
-        table.innerHTML += row
 
+    for ( let e = 0; e < wordData[i].meanings.length; e++){
+        let otherRow = ` <tr>
+                            <td>${wordData[i].meanings[e].partOfSpeech}</td>
+                        </tr>`
+table.innerHTML += row
+table.innerHTML += otherRow
+console.log('Hello');
+    }
 
     }
 }
