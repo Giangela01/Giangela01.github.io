@@ -1,13 +1,3 @@
-//for button to appear
-
-$('#s-word').change(function() {
-    let searchBtn = document.createElement("input");
-    searchBtn.value = "Hit ENTER again.";
-    searchBtn.type = "submit";
-    searchBtn.setAttribute("id", "s-btn");
-    document.getElementById("search").appendChild(searchBtn)
-});
-
 $('form').on('submit', getInfo);
 
 function getInfo(event) {
@@ -15,17 +5,17 @@ function getInfo(event) {
     event.preventDefault();
 
     $.ajax({
-         url:'https://api.dictionaryapi.dev/api/v2/entries/en/delta'
-      }).then(
+        url: 'https://api.dictionaryapi.dev/api/v2/entries/en/delta'
+    }).then(
         (data) => {
-         wordData = data;
-         retrieveInfo();
-        console.log(wordData);
+            wordData = data;
+            retrieveInfo();
+            console.log(wordData);
         },
         (error) => {
-         console.log('bad request', error);
+            console.log('bad request', error);
         }
-    );    
+    );
 }
 
 function retrieveInfo(data) {
@@ -39,15 +29,15 @@ function retrieveInfo(data) {
                     <tr>
                         <td>${wordData[i].origin}</td>
                     </tr>`
-
-    for ( let e = 0; e < wordData[i].meanings.length; e++){
-        let otherRow = ` <tr>
+        for (let e = 0; e < wordData[i].meanings.length; e++) {
+            let otherRow = ` <tr>
                             <td>${wordData[i].meanings[e].partOfSpeech}</td>
                         </tr>`
-table.innerHTML += row
-table.innerHTML += otherRow
-console.log('Hello');
-    }
+            table.innerHTML += row
+
+            table.innerHTML += otherRow
+            console.log('Hello');
+        }
 
     }
 }
