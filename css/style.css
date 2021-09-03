@@ -9,7 +9,9 @@
 
 /*Font reminder
 /* font-family: 'Montserrat', sans-serif;
-font-family: 'Permanent Marker', cursive; */
+font-family: 'Permanent Marker', cursive; 
+font-family: 'Kaisei HarunoUmi', serif; - word*/
+
 
 header {
     display: flex; 
@@ -36,7 +38,7 @@ input[type="text" i] {
 
 #s-btn {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     outline: none;
     background-color: white;    
     /* align-self: flex-end; */
