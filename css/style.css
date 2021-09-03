@@ -23,6 +23,10 @@ header {
 h1 {
     font-size: 50px;
 }
+audio {
+    width: 220px;
+    height: 20px;
+}
 
 input[type="text" i] {
     padding: 5px 10px;
