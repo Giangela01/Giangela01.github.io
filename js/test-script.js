@@ -37,16 +37,22 @@ function getPoS(data) {
 
             let row = `<p>${wordData[a].meanings[b].partOfSpeech} | ${wordData[a].phonetic}</p>
                         <p>Origin: ${wordData[a].origin}</p>
-                        <dl><lh>Definition:</lh>
+                        <dl id="defined"><lh>Definition:</lh>
                         </dl>`
-
-            for (let c = 0; c < wordData[a].meanings[b].definitions.length; c++) {
-            
-                
-                let defRow = `<dt>${wordData[a].meanings[b].definitions[c].definition}</dt>
-                <dt>${wordData[a].meanings[b].definitions[c].example}</dt><`
-            }
             table.innerHTML += row
+        }
+    }
+
+    let otherTable = document.getElementById('defined')
+
+    for (let c = 0; c < wordData.length; c++) {
+        for (let d = 0; d < wordData[c].meanings.length; d++) {
+            for (let e = 0; e < wordData[c].meanings[d].definitions.length; e++) {
+                console.log(wordData[c].meanings[d].definitions[e]definition)
+
+                // otherTable.innerHTML = `<dt>${wordData[c].meanings[d].definitions[e].definition}</dt>`
+            }
+
         }
     }
 }
