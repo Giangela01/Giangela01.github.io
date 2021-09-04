@@ -1,3 +1,5 @@
+let wordData;
+
 $('form').on('submit', getInfo);
 
 function getInfo(event) {
@@ -5,7 +7,7 @@ function getInfo(event) {
     event.preventDefault();
 
     $.ajax({
-        url: 'https://api.dictionaryapi.dev/api/v2/entries/en/delta'
+        url: 'https://api.dictionaryapi.dev/api/v2/entries/en/red'
     }).then(
         (data) => {
             wordData = data;
@@ -20,8 +22,6 @@ function getInfo(event) {
     );
 }
 
-
-
 function getMainWord(data) {
     document.getElementById("search-word").innerHTML =
         `<h2 class="main-word">${wordData[0].word}</h2>
@@ -30,30 +30,20 @@ function getMainWord(data) {
 }
 
 function getPoS(data) {
+
     let table = document.getElementById('pos-phonetics');
+    let defTable = document.getElementById('definition');
+    let meanings = wordData[0].meanings[0].definitions;
 
-    for (let i = 0; i < wordData.length; i++) {
-        for (let j = 0; j < wordData[i].meanings.length; j++) {
+    let partOfSpeech = `<p>${wordData[0].meanings[0].partOfSpeech} | ${wordData[0].phonetic}</p>
+    <p><em>Origin:</em> ${wordData[0].origin}</p>`;
 
-            let partOfSpeech = `<p>${wordData[i].meanings[j].partOfSpeech} | ${wordData[i].phonetic}</p>
-            <p>Origin: ${wordData[i].origin}</p>`;
+    meanings.forEach(element => {
+       let defA= element.definition
+       let defList = defA.map = (`<p>${defA}</p>`);
+        defTable.innerHTML += defList;
+    });
 
-            table.innerHTML += partOfSpeech;
-
-            let definition = wordData[i].meanings[j].definitions
-            let iterator = definition.values();
-
-            for (const value of iterator) {
-                console.log(value);
-              }
-
-
-
-            for (let k = 0; k < wordData[i].meanings[j].definitions.length; k++) {
-
-            }
-        }
-    }
-
+    table.innerHTML += partOfSpeech;
 
 }
