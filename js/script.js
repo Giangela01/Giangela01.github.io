@@ -33,10 +33,24 @@ function getPoS(data) {
     let table = document.getElementById('pos-phonetics');
 
     for (let i = 0; i < wordData.length; i++) {
-
         for (let j = 0; j < wordData[i].meanings.length; j++) {
-            console.log(wordData[j])
+
+            let partOfSpeech = `<p>${wordData[i].meanings[j].partOfSpeech} | ${wordData[i].phonetic}</p>
+            <p>Origin: ${wordData[i].origin}</p>`;
+
+            table.innerHTML += partOfSpeech;
+
+            let definition = wordData[i].meanings[j].definitions
+            let iterator = definition.values();
+
+            for (const value of iterator) {
+                console.log(value);
+              }
+
+
+
             for (let k = 0; k < wordData[i].meanings[j].definitions.length; k++) {
+
             }
         }
     }
