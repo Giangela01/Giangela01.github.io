@@ -12,7 +12,7 @@ function getInfo(event) {
             // retrieveInfo();
             getMainWord();
             getPoS();
-            console.log(wordData);
+            // console.log(wordData);
         },
         (error) => {
             console.log('bad request', error);
@@ -32,21 +32,14 @@ function getMainWord(data) {
 function getPoS(data) {
     let table = document.getElementById('pos-phonetics');
 
-    for (let a = 0; a < wordData.length; a++) {
-        for (let b = 0; b < wordData[a].meanings.length; b++) {
+    for (let i = 0; i < wordData.length; i++) {
 
-            let row = `<p>${wordData[a].meanings[b].partOfSpeech} | ${wordData[a].phonetic}</p>
-                        <p>Origin: ${wordData[a].origin}</p>
-                        <dl><lh>Definition:</lh>
-                        </dl>`
-
-            for (let c = 0; c < wordData[a].meanings[b].definitions.length; c++) {
-            
-                
-                let defRow = `<dt>${wordData[a].meanings[b].definitions[c].definition}</dt>
-                <dt>${wordData[a].meanings[b].definitions[c].example}</dt><`
+        for (let j = 0; j < wordData[i].meanings.length; j++) {
+            console.log(wordData[j])
+            for (let k = 0; k < wordData[i].meanings[j].definitions.length; k++) {
             }
-            table.innerHTML += row
         }
     }
+
+
 }
