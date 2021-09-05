@@ -19,8 +19,8 @@ function getInfo(event) {
             resetBtn();
         },
         (error) => {
-            window.alert("This is embrassing. Sorry, I don't know your word.", error);
             console.log('bad request', error);
+            alert("This is embrassing. Sorry, I don't know the word.");
         }
     );
 }
