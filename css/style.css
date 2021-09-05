@@ -1,16 +1,16 @@
 * {
     box-sizing: border-box;
 }
+
 *,
-*::before
-*::after {
+*::before *::after {
     box-sizing: inherit;
 }
 
 
 body {
-background-color: #90AFC5;
-  }
+    background-color: #90AFC5;
+}
 
 /*Font reminder
 font-family: 'Kaisei Tokumin', serif;
@@ -18,7 +18,7 @@ font-family: 'Montserrat', sans-serif; */
 
 
 header {
-    display: flex; 
+    display: flex;
     justify-content: center;
     font-family: 'Kaisei Tokumin', serif;
     padding: 5px 18px;
@@ -28,26 +28,27 @@ header {
 h1 {
     font-size: 55px;
 }
+
 audio {
     width: 150px;
     height: 20px;
 }
 
-input[type="text" i] {
+input[type="text"i] {
     padding: 5px 10px;
     margin-top: 32.5px;
     border: none;
     font-family: 'Kaisei Tokumin', serif;
     font-size: 53px;
     outline: none;
-    color:#763626;
+    color: #763626;
     background: none;
     background-size: cover;
 }
 
 
 
-.container{
+.container {
 
     border: solid black 10px;
     margin: 25px 85px;
@@ -66,10 +67,12 @@ p.part-of-speech {
     font-family: 'Kaisei Tokumin', serif;
 
 }
+
 div #def-title {
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
 }
+
 div #definition {
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
@@ -87,8 +90,5 @@ lh {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     outline: none;
-    background-color: white;    
+    background-color: white;
 }
-
-
-

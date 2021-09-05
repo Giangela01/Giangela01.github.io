@@ -25,7 +25,7 @@ function getInfo(event) {
     );
 }
 
-function resetBtn(){
+function resetBtn() {
     $('#s-btn').attr("value", "Clear Search");
     $('#s-btn').attr("type", "reset");
 }
@@ -67,6 +67,6 @@ function getPoS(data) {
     table.innerHTML += partOfSpeech;
 }
 
-function resetInfo(){
+function resetInfo() {
     location.reload();
 }
