@@ -58,8 +58,8 @@ function getPoS(data) {
         let defA = element;
         let defList = defA.map = (`<dl><lh>:${defA.definition}</lh>
                                     <dt><em>${defA.example ? 'Example: ' + defA.example : ""}</em></dt>
-                                    <dd>${defA.synonyms ? `<u>Synonyms</u>: ` + defA.synonyms : ""}</dd>
-                                    <dd>${defA.antonyms ? `<u>Antonyms</u>: ` + defA.antonyms : ""}</dd>
+                                    <dd>${defA.synonyms ? '<u>Synonyms</u>: ' + defA.synonyms : ""}</dd>
+                                    <dd>${defA.antonyms ? '<u>Antonyms</u>: ' + defA.antonyms : ""}</dd>
                                     </dl>`);
         defTable.innerHTML += defList;
     });
