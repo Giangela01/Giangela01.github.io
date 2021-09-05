@@ -3,6 +3,7 @@ let wordData;
 const $input = $('input[type="text"]');
 
 $('form').on('submit', getInfo);
+$('form').on('reset', resetInfo);
 
 function getInfo(event) {
 
@@ -15,12 +16,19 @@ function getInfo(event) {
             wordData = data;
             getMainWord();
             getPoS();
+            resetBtn();
         },
         (error) => {
             console.log('bad request', error);
         }
     );
 }
+
+function resetBtn(){
+    $('#s-btn').attr("value", "Clear Search");
+    $('#s-btn').attr("type", "reset");
+}
+
 
 function getMainWord(data) {
     document.getElementById("search-word").innerHTML =
@@ -52,5 +60,8 @@ function getPoS(data) {
     });
 
     table.innerHTML += partOfSpeech;
+}
 
+function resetInfo(){
+    location.reload();
 }

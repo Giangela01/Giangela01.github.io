@@ -7,17 +7,22 @@
     box-sizing: inherit;
 }
 
+
+body {
+background-color: #90AFC5;
+  }
+
 /*Font reminder
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Permanent Marker', cursive; 
-font-family: 'Kaisei HarunoUmi', serif; - word*/
+font-family: 'Kaisei Tokumin', serif;
+font-family: 'Montserrat', sans-serif; */
 
 
 header {
     display: flex; 
-    /* justify-content: center; */
-    font-family: 'Permanent Marker', cursive;
+    justify-content: center;
+    font-family: 'Kaisei Tokumin', serif;
     padding: 5px 18px;
+    color: #336B87;
 }
 
 h1 {
@@ -32,10 +37,24 @@ input[type="text" i] {
     padding: 5px 10px;
     margin-top: 32.5px;
     border: none;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Kaisei Tokumin', serif;
     font-size: 48px;
     outline: none;
-    color: red;
+    color:#763626;
+    background: none;
+    background-size: cover;
+}
+
+.container{
+    border: solid black 10px;
+    margin: 25px 85px;
+    padding: 0 15px;
+}
+
+.main-word {
+    font-size: 45px;
+
+
 }
 
 
@@ -45,7 +64,6 @@ input[type="text" i] {
     font-size: 18px;
     outline: none;
     background-color: white;    
-    /* align-self: flex-end; */
 }
 
 
