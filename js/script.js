@@ -32,7 +32,7 @@ function resetBtn(){
 
 function getMainWord(data) {
     document.getElementById("search-word").innerHTML =
-        `<h2 class="main-word">${wordData[0].word}</h2>
+        `<span class="main-word">${wordData[0].word}</span>
     <audio controls src="${wordData[0].phonetics[0].audio}" type="audio/mp3">
     Sorry, your browser does not seem support the audio.</audio>`;
 
@@ -47,8 +47,10 @@ function getPoS(data) {
 
     defTitle.innerText = "Definition/s"
 
+    let origin = wordData[0].origin;
+
     let partOfSpeech = `<p>${wordData[0].meanings[0].partOfSpeech} | ${wordData[0].phonetic}</p>
-    <p><em>Origin:</em> ${wordData[0].origin}</p>`;
+    <p>${origin ? `Origin: `+ origin : ""}</p>`;
 
     meanings.forEach(element => {
         let defA = element;
