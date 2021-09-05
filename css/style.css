@@ -29,7 +29,7 @@ h1 {
     font-size: 55px;
 }
 audio {
-    width: 220px;
+    width: 150px;
     height: 20px;
 }
 
@@ -45,7 +45,10 @@ input[type="text" i] {
     background-size: cover;
 }
 
+
+
 .container{
+
     border: solid black 10px;
     margin: 25px 85px;
     padding: 25px 20px;
