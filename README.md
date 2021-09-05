@@ -1,1 +1,3 @@
-# Giangela01.github.io
+# What's that word?
+"What's that word?" is a website that allows users to search for words they might not know of the meaning. It's basically an online dictionary at gives you examples, synonyms and antonyms.
+
