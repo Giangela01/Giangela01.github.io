@@ -39,24 +39,26 @@ function getMainWord(data) {
 }
 
 function getPoS(data) {
-
+    let container = document.getElementById('main-container');
     let table = document.getElementById('pos-phonetics');
     let defTitle = document.getElementById('def-title');
     let defTable = document.getElementById('definition');
     let meanings = wordData[0].meanings[0].definitions;
 
     defTitle.innerText = "Definition/s"
+    container.classList.toggle("container");
 
     let origin = wordData[0].origin;
 
-    let partOfSpeech = `<p>${wordData[0].meanings[0].partOfSpeech} | ${wordData[0].phonetic}</p>
-    <p>${origin ? `Origin: `+ origin : ""}</p>`;
+    let partOfSpeech = `<p class="part-of-speech">${wordData[0].meanings[0].partOfSpeech} | ${wordData[0].phonetic}</p>
+    <p class="origin">${origin ? `Origin: `+ origin : ""}</p>`;
 
     meanings.forEach(element => {
         let defA = element;
         let defList = defA.map = (`<dl><lh>:${defA.definition}</lh>
                                     <dt><em>${defA.example ? 'Example: ' + defA.example : ""}</em></dt>
-                                    <dd>${defA.synonyms ? defA.synonyms : ""}</dd>
+                                    <dd>${defA.synonyms ? `Synonyms: ` + defA.synonyms : ""}</dd>
+                                    <dd>${defA.antonyms ? `<em>Antonyms: </em>` + defA.antonyms : ""}</dd>
                                     </dl>`);
         defTable.innerHTML += defList;
     });
